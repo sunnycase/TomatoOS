@@ -22,6 +22,7 @@
     <ProjectGuid>{28B7C1E8-BD49-48E7-AC26-C5AE7A8ADAE2}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>Bootloader</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -71,7 +72,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>D:\Software\Development\SDKs\UDK2014\MdePkg\Include;D:\Software\Development\SDKs\UDK2014\MdePkg\Include\X64;$(IncludePath)</IncludePath>
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\EFI\Boot\</OutDir>
+    <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\EFI\Boot\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
     <TargetName>bootx64</TargetName>
     <TargetExt>.efi</TargetExt>
@@ -80,7 +81,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <IncludePath>D:\Software\Development\SDKs\UDK2014\MdePkg\Include;D:\Software\Development\SDKs\UDK2014\MdePkg\Include\X64;$(IncludePath)</IncludePath>
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\EFI\Boot\</OutDir>
+    <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\EFI\Boot\</OutDir>
     <TargetName>bootx64</TargetName>
     <TargetExt>.efi</TargetExt>
     <LibraryPath>D:\Software\Development\SDKs\UDK2014\Build\NT32X64\DEBUG_VS2013\X64\MdePkg;$(LibraryPath)</LibraryPath>
@@ -88,7 +89,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>D:\Software\Development\SDKs\UDK2014\MdePkg\Include;D:\Software\Development\SDKs\UDK2014\MdePkg\Include\X64;$(IncludePath)</IncludePath>
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\EFI\Boot\</OutDir>
+    <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\EFI\Boot\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
     <TargetName>bootx64</TargetName>
     <TargetExt>.efi</TargetExt>
@@ -97,7 +98,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <IncludePath>D:\Software\Development\SDKs\UDK2014\MdePkg\Include;D:\Software\Development\SDKs\UDK2014\MdePkg\Include\X64;$(IncludePath)</IncludePath>
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\EFI\Boot\</OutDir>
+    <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\EFI\Boot\</OutDir>
     <TargetName>bootx64</TargetName>
     <TargetExt>.efi</TargetExt>
     <LibraryPath>D:\Software\Development\SDKs\UDK2014\Build\NT32X64\DEBUG_VS2013\X64\MdePkg;$(LibraryPath)</LibraryPath>

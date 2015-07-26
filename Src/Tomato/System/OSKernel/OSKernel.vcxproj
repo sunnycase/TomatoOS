@@ -22,6 +22,7 @@
     <ProjectGuid>{04FC833C-8561-487F-8A2F-BD5A26D3DF8A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>OSKernel</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -70,24 +71,24 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\Tomato\System\</OutDir>
+    <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\Tomato\System\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
     <IncludePath>D:\Software\Development\SDKs\EFI_Toolkit_2.0\include\efi;D:\Software\Development\SDKs\EFI_Toolkit_2.0\include\efi\em64t;$(VC_IncludePath);$(UniversalCRT_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\Tomato\System\</OutDir>
+    <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\Tomato\System\</OutDir>
     <IncludePath>D:\Software\Development\SDKs\UDK2014\MdePkg\Include;D:\Software\Development\SDKs\UDK2014\MdePkg\Include\X64;$(VC_IncludePath);$(UniversalCRT_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\Tomato\System\</OutDir>
+    <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\Tomato\System\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
     <IncludePath>D:\Software\Development\SDKs\EFI_Toolkit_2.0\include\efi;D:\Software\Development\SDKs\EFI_Toolkit_2.0\include\efi\em64t;$(VC_IncludePath);$(UniversalCRT_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\Tomato\System\</OutDir>
+    <OutDir>$(SolutionDir)Build\$(Platform)\$(Configuration)\Tomato\System\</OutDir>
     <IncludePath>D:\Software\Development\SDKs\EFI_Toolkit_2.0\include\efi;D:\Software\Development\SDKs\EFI_Toolkit_2.0\include\efi\em64t;$(VC_IncludePath);$(UniversalCRT_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
