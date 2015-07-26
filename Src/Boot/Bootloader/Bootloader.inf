@@ -1,0 +1,43 @@
+## @file
+#  Tomato OS Bootloader
+#  (c) 2015 SunnyCase
+#  创建日期：2015-4-21
+##
+
+[Defines]
+  INF_VERSION                    = 0x00010005
+  BASE_NAME                      = Bootloader
+  FILE_GUID                      = BAA61BC6-2100-4E9F-B340-2E2A2170D8E0
+
+  MODULE_TYPE                    = UEFI_APPLICATION
+  VERSION_STRING                 = 1.0
+  UEFI_SPECIFICATION_VERSION	   = 0x0002001E
+  ENTRY_POINT 					         = UefiMain
+
+
+#
+#  VALID_ARCHITECTURES           = X64
+#
+
+[Sources.X64]
+  Bootloader.cpp
+  Paging.cpp
+
+[Packages]
+  MdePkg/MdePkg.dec
+
+[LibraryClasses]
+  UefiApplicationEntryPoint
+  UefiLib
+
+[Protocols]
+  gEfiLoadedImageProtocolGuid
+  gEfiSimpleFileSystemProtocolGuid
+  
+ [BuildOptions]
+  MSFT:*_*_IA32_CC_FLAGS == /nologo /W4 /WX- /Gy /c /D UNICODE /Od /FIAutoGen.h /EHs-c- /GF /Gs8192 /Zi /Gm /D _CRT_SECURE_NO_WARNINGS /D _CRT_SECURE_NO_DEPRECATE
+  MSFT:*_*_IA32_PP_FLAGS == /nologo /E /TC /FIAutoGen.h
+
+  MSFT:*_*_X64_DLINK_FLAGS == /OUT:"D:\Work\Projects\OS\Tomato\x64\Debug\EFI\Boot\bootx64.efi" /MANIFEST /NXCOMPAT:NO /PDB:"D:\Work\Projects\OS\Tomato\x64\Debug\EFI\Boot\bootx64.pdb" /DYNAMICBASE:NO /MACHINE:X64 /ENTRY:"_ModuleEntryPoint" /INCREMENTAL /SUBSYSTEM:EFI_APPLICATION /MANIFESTUAC:NO /ERRORREPORT:PROMPT /NOLOGO /NODEFAULTLIB /TLBID:1 
+  MSFT:*_*_X64_CC_FLAGS == /nologo /W4 /WX- /Gy /c /D UNICODE /Od /FIAutoGen.h /EHs-c- /GF /Gs8192 /Zi /Gm /D _CRT_SECURE_NO_WARNINGS /D _CRT_SECURE_NO_DEPRECATE
+  MSFT:*_*_X64_PP_FLAGS == /nologo /E /TC /FIAutoGen.h
